@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>Visitor List</title>
+    
+    <link rel="stylesheet" crossorigin="anonymous"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+    
+	<script crossorigin="anonymous"
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" >
+	</script>
+
+</head>
+<body>
+    <h2>Visitor Form</h2>
+    <form action="" method = "POST">{% csrf_token %}
+        <div class="form-group row">
+            <label for="id1">Visitor Id</label>
+            <input type="text" class="form-control" name="id1" id="id1" value="{{visit.id1}}">
+          </div>
+        <div class="form-group row">
+          <label for="name1">Visitor name</label>
+          <input type="text" class="form-control" name="name1" id="name1" value="{{visit.name1}}">
+        </div>
+
+          <div class="form-group row">
+            <label for="organization_name">Org name</label>
+            <input type="text" class="form-control" name="organization_name" id="organization_name" value="{{visit.organization_name}}">
+          </div>
+          <div class="form-group row">
+            <label for="purpose">Purpose</label>
+            <input type="text" class="form-control" name="purpose" id="purpose" value="{{visit.purpose}}">
+          </div> 
+           <div class="form-group row">
+            <label for="cnic">CNIC number</label>
+            <input type="text" class="form-control" name="cnic" id="cnic" value="{{visit.cnic}}">
+          </div>
+          <div class="form-group row">
+            <label for="contact_no">Contact number</label>
+            <input type="text" class="form-control" name="contact_no" id="contact_no" value="{{visit.contact_no}}">
+          </div> 
+          <!-- <div class="form-check row ">
+            <label for="gender">Gender</label>
+            <input type="radio" id="0" name="gender" value="{{visit.gender}}">
+            <label for="male">Male</label><br>
+            <input type="radio" id="1" name="gender" value="{{visit.gender}}">
+            <label for="female">Female</label><br>
+          </div> -->  
+          <div class="form-group row">
+            <label for="employee_id">Employee Id</label>
+            <input type="text" class="form-control" name="employee_id" id="employee_id" value="{{visit.employee_id}}">
+          </div>
+          <div class="form-group row">
+            <label for="department_id">Department Id</label>
+            <input type="text" class="form-control" name="department_id" id="department_id" value="{{visit.department_id}}">
+          </div>
+        <button type="btnAdd" class="btn btn-primary">Submit</button>
+        <a href="/" class="btn btn-primary">Cancel</a>
+      </form>
+
+</body>

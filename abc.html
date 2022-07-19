@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>Dept List</title>
+    
+    <link rel="stylesheet" crossorigin="anonymous"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+    
+	<script crossorigin="anonymous"
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" >
+	</script>
+
+</head>
+
+<body>
+    <h2>Cars List</h2>
+    <a class="btn btn-primary" href="adddept">Add New Dept</a>
+    <a class="btn btn-primary" href="addvisitor">Add Visitor</a>
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dept in depts %}
+                <tr>
+                    <td>{{ dept.id }}</th>
+                    <td>{{ dept.name }}</td>
+                    <td><a href='updatedept/{{ dept.id }}'>Edit</a></td>
+                    <td><a href='deletedept/{{ dept.id }}'>Delete</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    
+</body>
